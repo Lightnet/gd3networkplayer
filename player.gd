@@ -44,7 +44,8 @@ func _fixed_process(delta):
 		r += Vector3(0,1,0) * rotation_speed
 		
 	if(Input.is_action_pressed("jump")):
-		move(Vector3(0,1,0))
+		#move(Vector3(0,1,0))
+		move_and_slide( Vector3(0,50,0), FLOOR_NORMAL, SLOPE_SLIDE_STOP )
 	#set_transform(t)
 	set_rotation(r)
 	pass
